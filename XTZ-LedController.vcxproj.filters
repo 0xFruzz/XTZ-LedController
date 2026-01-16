@@ -23,21 +23,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="XTZLedController.qrc">
+    <QtRcc Include="XTZ-LedController\XTZLedController.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="XTZLedController.ui">
+    <QtUic Include="XTZ-LedController\XTZLedController.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="XTZLedController.h">
+    <QtMoc Include="XTZ-LedController\XTZLedController.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="XTZLedController.cpp">
+    <ClCompile Include="XTZ-LedController\XTZLedController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="XTZ-LedController\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

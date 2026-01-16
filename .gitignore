@@ -26,6 +26,43 @@
 *.a
 *.lib
 
+
+.vs/
+*.sln.view
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.opendb
+*.db
+*.ipch
+
+# --- Build Outputs ---
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.iobj
+*.ipdb
+*.log
+*.tlog
+*.lastbuildstate
+*.idb
+
+GeneratedFiles/
+*.qrc.depends
+
+*.pfx
+*.publish.xml
+Thumbs.db
+Desktop.ini
 # Executables
 *.exe
 *.out

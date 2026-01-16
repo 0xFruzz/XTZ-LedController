@@ -92,11 +92,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="XTZLedController.qrc" />
-    <QtUic Include="XTZLedController.ui" />
-    <QtMoc Include="XTZLedController.h" />
-    <ClCompile Include="XTZLedController.cpp" />
-    <ClCompile Include="main.cpp" />
+    <QtRcc Include="XTZ-LedController\XTZLedController.qrc" />
+    <QtUic Include="XTZ-LedController\XTZLedController.ui" />
+    <QtMoc Include="XTZ-LedController\XTZLedController.h" />
+    <ClCompile Include="XTZ-LedController\XTZLedController.cpp" />
+    <ClCompile Include="XTZ-LedController\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
