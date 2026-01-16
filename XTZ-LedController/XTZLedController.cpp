@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QNetworkRequest>
 #include "Windows.h"
+#include <QTimer>
 
 XTZLedController::XTZLedController(QWidget* parent) : QWidget(parent) {
     networkManager = new QNetworkAccessManager(this);
@@ -54,13 +55,39 @@ void XTZLedController::updateMenu() {
     trayMenu->addAction("Refresh Devices", this, &XTZLedController::scanNetwork);
     trayMenu->addAction("Set Global Color", this, &XTZLedController::setAllColors);
     trayMenu->addAction("Check Status", this, &XTZLedController::checkStats);
+    trayMenu->addAction("Disable ", this, &XTZLedController::checkStats);
+
+    trayMenu->addSeparator();
+    trayMenu->addAction("Turn on all", this, &XTZLedController::turnOnAll);
+    trayMenu->addAction("Turn off all", this, &XTZLedController::turnOffAll);
 
     trayMenu->addSeparator();
     QString mask = QString::fromUtf8("Network: %1.x").arg(networkMask);
     trayMenu->addAction(mask, this, &XTZLedController::changeMask);
 
     trayMenu->addSeparator();
+
+
     trayMenu->addAction("Exit", qApp, &QCoreApplication::quit);
+}
+
+void XTZLedController::turnOnAll() {
+    for (const auto& dev : foundDevices) {
+        QString url = QString("http://%1/setup?brightness=255")
+            .arg(dev.ip);
+
+        networkManager->get(QNetworkRequest(QUrl(url)));
+        networkManager->get(QNetworkRequest(QUrl(url)));
+    }
+}
+
+void XTZLedController::turnOffAll() {
+    for (const auto& dev : foundDevices) {
+        QString url = QString("http://%1/setup?brightness=0").arg(dev.ip);
+
+        networkManager->get(QNetworkRequest(QUrl(url)));
+        networkManager->get(QNetworkRequest(QUrl(url)));
+    }
 }
 
 void XTZLedController::scanNetwork() {

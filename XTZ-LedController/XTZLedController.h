@@ -24,6 +24,8 @@ public:
     ~XTZLedController();
 
 private slots:
+    void turnOnAll();
+    void turnOffAll();
     void scanNetwork();        
     void setAllColors();         
     void checkStats();           
