@@ -22,8 +22,8 @@ XTZLedController::XTZLedController(QWidget* parent) : QWidget(parent) {
 
     trayMenu = new QMenu(this);
     trayIcon = new QSystemTrayIcon(this);
-
-    trayIcon->setIcon(style()->standardIcon(QStyle::SP_ComputerIcon));
+    QIcon myIcon(":/images/icon.png");
+    trayIcon->setIcon(myIcon);
 
     connect(trayMenu, &QMenu::aboutToShow, this, &XTZLedController::updateMenu);
 
@@ -55,7 +55,7 @@ void XTZLedController::updateMenu() {
     trayMenu->addAction("Refresh Devices", this, &XTZLedController::scanNetwork);
     trayMenu->addAction("Set Global Color", this, &XTZLedController::setAllColors);
     trayMenu->addAction("Check Status", this, &XTZLedController::checkStats);
-    trayMenu->addAction("Disable ", this, &XTZLedController::checkStats);
+    trayMenu->addAction("Check stats ", this, &XTZLedController::checkStats);
 
     trayMenu->addSeparator();
     trayMenu->addAction("Turn on all", this, &XTZLedController::turnOnAll);

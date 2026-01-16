@@ -35,6 +35,9 @@
     <ClCompile Include="XTZ-LedController\XTZLedController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <QtRcc Include="resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="XTZ-LedController\main.cpp">

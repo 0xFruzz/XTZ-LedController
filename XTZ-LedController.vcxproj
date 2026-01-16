@@ -92,6 +92,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <QtRcc Include="resources.qrc" />
     <QtRcc Include="XTZ-LedController\XTZLedController.qrc" />
     <QtUic Include="XTZ-LedController\XTZLedController.ui" />
     <QtMoc Include="XTZ-LedController\XTZLedController.h" />
