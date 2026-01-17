@@ -55,7 +55,7 @@ void XTZLedController::updateMenu() {
     trayMenu->addAction("Refresh Devices", this, &XTZLedController::scanNetwork);
     trayMenu->addAction("Set Global Color", this, &XTZLedController::setAllColors);
     trayMenu->addAction("Check Status", this, &XTZLedController::checkStats);
-    trayMenu->addAction("Check stats ", this, &XTZLedController::checkStats);
+    trayMenu->addAction("Check Stats", this, &XTZLedController::checkStats);
 
     trayMenu->addSeparator();
     trayMenu->addAction("Turn on all", this, &XTZLedController::turnOnAll);
